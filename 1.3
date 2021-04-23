@@ -1,0 +1,19 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner parserInputValue = new Scanner(System.in);
+        System.out.println("Введите x");
+        double x = parserInputValue.nextDouble();
+        System.out.println("Введите y");
+        double y = parserInputValue.nextDouble();
+        if(IsPointSquare(x,y)) System.out.println("YES");
+        else System.out.println("NO");
+    }
+    public  static boolean IsPointSquare(double x, double y){
+        return Math.abs(x)+Math.abs(y)<=1;
+    }
+}
